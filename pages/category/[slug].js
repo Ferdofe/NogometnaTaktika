@@ -16,8 +16,8 @@ const CategoryPosts = ({ posts }) => {
         <title>Nogometna taktika</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className = "grid grid-cols-1 lg:grid-cols-12 grid-rows-1 gap-12 container mr-6 lg:mr-0">
-          <div className="grid grid-cols-1 lg:grid-cols-3 object-contain items-stretch col-span-8 gap-4">
+      <div className = "grid grid-cols-1 lg:grid-cols-12 grid-rows-1 gap-12 container ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 object-contain items-stretch col-span-8 gap-4 mr-6 lg:mr-0">
             {posts.map((post, index)=><PostCard  post = {post.node} key = {post?.title}></PostCard>)}
           </div>
           <div className="lg:col-span-4 lg:row-span-3 col-span-8">
