@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import {getCategories, getCategoryPosts, getPostDetails} from '../../services';
-import {PostDetail, Categories, PostWidget, Author, Comments, PostCard, CommentsForm} from '../../components';
+import {PostDetail, Categories, PostWidget, Author, Comments, PostCard, CommentsForm, Loader} from '../../components';
 import { TypeInfo } from 'graphql';
 const CategoryPosts = ({ posts }) => {
   const router = useRouter();
