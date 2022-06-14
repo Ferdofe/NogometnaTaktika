@@ -48,7 +48,7 @@ export async function getStaticPaths(){
     return {
         paths: categories.map(({ slug }) => ({params: {slug}})),
         fallback: true,
-        revalidate: 10,
+       
 
     }
 }
