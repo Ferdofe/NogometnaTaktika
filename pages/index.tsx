@@ -1,4 +1,4 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import {PostCard, Categories, PostWidget} from  '../components/';
@@ -33,6 +33,7 @@ export default function Home({ posts }){
 export async function getStaticProps(){
   const posts = (await getPosts()) || [];
   return{
-    props:{ posts }
+    props:{ posts },
+    revalidate: 10,
   }
 }
