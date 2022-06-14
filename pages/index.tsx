@@ -6,7 +6,7 @@ import { getPosts } from '../services';
 import { FeaturedPosts } from '../sections';
 
 
-export default function Home({ posts }){
+export default function Home(posts: any ){
   return (
     <div className="container mb-8 px-10 mx-auto">
       <Head>
@@ -16,7 +16,7 @@ export default function Home({ posts }){
       <FeaturedPosts/>
       <div className = "grid grid-cols-1 lg:grid-cols-12 grid-rows-1 gap-12 container">
           <div className="grid grid-cols-1 lg:grid-cols-3 object-contain items-stretch col-span-8 gap-4 mr-6 lg:mr-0">
-            {posts.map((post)=><PostCard  post = {post.node} key = {post?.title}></PostCard>)}
+            {posts.map((post: any)=><PostCard  post = {post.node} key = {post?.title}></PostCard>)}
           </div>
           <div className="lg:col-span-4 lg:row-span-3 col-span-8">
             <div className="lg:sticky relative top-8">
