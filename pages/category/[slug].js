@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import {getCategories, getCategoryPosts, getPostDetails} from '../../services';
 import {PostDetail, Categories, PostWidget, Author, Comments, PostCard, CommentsForm, Loader} from '../../components';
 import { TypeInfo } from 'graphql';
-const CategoryPosts = ({ posts: any }) => {
+const CategoryPosts = ({ posts }) => {
   const router = useRouter();
 
   if (router.isFallback) {
